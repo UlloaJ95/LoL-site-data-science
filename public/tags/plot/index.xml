@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plot on Strata</title>
+    <link>/tags/plot/</link>
+    <description>Recent content in Plot on Strata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using SQL</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>Filtering columns through select and where
+query&amp;lt;-&amp;quot;SELECT playerID, teamID, yearID,HR FROM BattingWHERE teamID=&amp;#39;NYA&amp;#39; and yearID=1927&amp;quot;sqldf(query)playerID teamID yearID HR1 beallwa01 NYA 1927 02 bengobe01 NYA 1927 03 collipa01 NYA 1927 74 combsea01 NYA 1927 65 duganjo01 NYA 1927 26 durstce01 NYA 1927 07 gazelmi01 NYA 1927 08 gehrilo01 NYA 1927 479 giardjo01 NYA 1927 010 grabojo01 NYA 1927 011 hoytwa01 NYA 1927 012 koenima01 NYA 1927 313 lazzeto01 NYA 1927 1814 meusebo01 NYA 1927 815 moorewi01 NYA 1927 116 morehra01 NYA 1927 117 paschbe01 NYA 1927 218 pennohe01 NYA 1927 019 pipgrge01 NYA 1927 120 ruethdu01 NYA 1927 121 ruthba01 NYA 1927 6022 shawkbo01 NYA 1927 023 shockur01 NYA 1927 024 thomamy01 NYA 1927 025 weraju01 NYA 1927 1Getting stats for a team by typing WHERE =</description>
+    </item>
+    
+    <item>
+      <title>Using SQL</title>
+      <link>/post/usingsql/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/usingsql/</guid>
+      <description>Filtering columns through select and where
+query&amp;lt;-&amp;quot;SELECT playerID, teamID, yearID,HR FROM BattingWHERE teamID=&amp;#39;NYA&amp;#39; and yearID=1927&amp;quot;sqldf(query)playerID teamID yearID HR1 beallwa01 NYA 1927 02 bengobe01 NYA 1927 03 collipa01 NYA 1927 74 combsea01 NYA 1927 65 duganjo01 NYA 1927 26 durstce01 NYA 1927 07 gazelmi01 NYA 1927 08 gehrilo01 NYA 1927 479 giardjo01 NYA 1927 010 grabojo01 NYA 1927 011 hoytwa01 NYA 1927 012 koenima01 NYA 1927 313 lazzeto01 NYA 1927 1814 meusebo01 NYA 1927 815 moorewi01 NYA 1927 116 morehra01 NYA 1927 117 paschbe01 NYA 1927 218 pennohe01 NYA 1927 019 pipgrge01 NYA 1927 120 ruethdu01 NYA 1927 121 ruthba01 NYA 1927 6022 shawkbo01 NYA 1927 023 shockur01 NYA 1927 024 thomamy01 NYA 1927 025 weraju01 NYA 1927 1Getting stats for a team by typing WHERE =</description>
+    </item>
+    
+  </channel>
+</rss>

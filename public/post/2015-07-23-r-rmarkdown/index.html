@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Using SQL &middot; Strata</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Your name">
+		<meta name="description" content="Describe your website">
+		<meta http-equiv="content-language" content="en-us" />
+
+		
+		<meta name="og:site_name" content="Strata">
+		<meta name="og:title" content="Using SQL">
+		<meta name="og:url" content="/post/2015-07-23-r-rmarkdown/">
+		
+		<meta name="og:image" content="/images/Rakan.png">
+		
+		
+
+		<meta name="generator" content="Hugo 0.31.1" />
+
+		<!--[if lte IE 8]><script src='/js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="//css/ie8.css"><![endif]-->
+
+		
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	
+	<a href="/" class="image avatar"><img src="/images/Rakan.png" alt="" /></a>
+	
+	
+		<h1><strong>I&rsquo;m Vastayan Rouge</strong>, a Silver 4 Rakan main on the NA server. <br>  I am on the autism spectrum and my goal is to be gold 5 next season. <br> Wish me luck fam!</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="/">Home</a></li>
+			
+				<li><a href="/post/">Blog</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>Using SQL</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2015-07-23 21:13:14 -0500 -0500">2015-07-23</time>&nbsp;&nbsp;
+
+
+
+
+    
+    
+        <i class="fa fa-folder"></i>&nbsp;&nbsp;
+        
+        <a class="article-category-link" href="/categories/r">R</a>
+        
+        
+    
+
+
+
+   
+   
+       &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+       
+       <a class="article-category-link" href="/tags/r-markdown">R Markdown</a>
+       &middot;
+       
+       <a class="article-category-link" href="/tags/plot">plot</a>
+       &middot;
+       
+       <a class="article-category-link" href="/tags/regression">regression</a>
+       
+       
+   
+
+
+	</span>
+
+	<p>
+	    <p>Filtering columns through select and where</p>
+<pre><code>query&lt;-&quot;SELECT playerID, teamID, yearID,HR FROM Batting
+WHERE teamID=&#39;NYA&#39; and yearID=1927&quot;
+sqldf(query)
+
+playerID teamID yearID HR
+1  beallwa01    NYA   1927  0
+2  bengobe01    NYA   1927  0
+3  collipa01    NYA   1927  7
+4  combsea01    NYA   1927  6
+5  duganjo01    NYA   1927  2
+6  durstce01    NYA   1927  0
+7  gazelmi01    NYA   1927  0
+8  gehrilo01    NYA   1927 47
+9  giardjo01    NYA   1927  0
+10 grabojo01    NYA   1927  0
+11  hoytwa01    NYA   1927  0
+12 koenima01    NYA   1927  3
+13 lazzeto01    NYA   1927 18
+14 meusebo01    NYA   1927  8
+15 moorewi01    NYA   1927  1
+16 morehra01    NYA   1927  1
+17 paschbe01    NYA   1927  2
+18 pennohe01    NYA   1927  0
+19 pipgrge01    NYA   1927  1
+20 ruethdu01    NYA   1927  1
+21  ruthba01    NYA   1927 60
+22 shawkbo01    NYA   1927  0
+23 shockur01    NYA   1927  0
+24 thomamy01    NYA   1927  0
+25  weraju01    NYA   1927  1
+</code></pre>
+<p>Getting stats for a team by typing WHERE =</p>
+<pre><code>query&lt;-&quot;SELECT playerID, yearID,teamID,HR FROM Batting
+WHERE teamID=&#39;NYA&#39; and HR&gt;=40&quot;
+
+sqldf(query)
+
+ playerID yearID teamID HR
+1   ruthba01   1920    NYA 54
+2   ruthba01   1921    NYA 59
+3   ruthba01   1923    NYA 41
+4   ruthba01   1924    NYA 46
+5   ruthba01   1926    NYA 47
+6  gehrilo01   1927    NYA 47
+7   ruthba01   1927    NYA 60
+8   ruthba01   1928    NYA 54
+9   ruthba01   1929    NYA 46
+10 gehrilo01   1930    NYA 41
+11  ruthba01   1930    NYA 49
+12 gehrilo01   1931    NYA 46
+13  ruthba01   1931    NYA 46
+14  ruthba01   1932    NYA 41
+15 gehrilo01   1934    NYA 49
+16 gehrilo01   1936    NYA 49
+17 dimagjo01   1937    NYA 46
+18 mantlmi01   1956    NYA 52
+19 mantlmi01   1958    NYA 42
+20 mantlmi01   1960    NYA 40
+21 mantlmi01   1961    NYA 54
+22 marisro01   1961    NYA 61
+23 jacksre01   1980    NYA 41
+24 martiti02   1997    NYA 44
+25 giambja01   2002    NYA 41
+26 giambja01   2003    NYA 41
+27 rodrial01   2005    NYA 48
+28 rodrial01   2007    NYA 54
+29 grandcu01   2011    NYA 41
+30 grandcu01   2012    NYA 43
+</code></pre>
+<p>JOINS</p>
+<p>Here we use SQL to find Babe Ruth home runs, in what year, and what team he was playing for when he hit those homers.</p>
+<pre><code>
+query&lt;-&quot;SELECT playerID,teamID,yearID,HR FROM Batting
+WHERE playerID=&#39;ruthba01&#39;&quot;
+
+sqldf(query)
+
+   playerID teamID yearID HR
+1  ruthba01    BOS   1914  0
+2  ruthba01    BOS   1915  4
+3  ruthba01    BOS   1916  3
+4  ruthba01    BOS   1917  2
+5  ruthba01    BOS   1918 11
+6  ruthba01    BOS   1919 29
+7  ruthba01    NYA   1920 54
+8  ruthba01    NYA   1921 59
+9  ruthba01    NYA   1922 35
+10 ruthba01    NYA   1923 41
+11 ruthba01    NYA   1924 46
+12 ruthba01    NYA   1925 25
+13 ruthba01    NYA   1926 47
+14 ruthba01    NYA   1927 60
+15 ruthba01    NYA   1928 54
+16 ruthba01    NYA   1929 46
+17 ruthba01    NYA   1930 49
+18 ruthba01    NYA   1931 46
+19 ruthba01    NYA   1932 41
+20 ruthba01    NYA   1933 34
+21 ruthba01    NYA   1934 22
+22 ruthba01    BSN   1935  6
+</code></pre>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "spf13" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/spf13" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/spf13" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		
+		
+		<li><a href="//gitlab.com/spf13" target="_blank" class="icon fa-gitlab"><span class="label">GitLab</span></a></li>
+		
+		
+		
+		
+		
+		<li><a href="/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+		
+		<li><a href="/index.xml" class="icon fa-rss" type="application/rss+xml"><span class="label">RSS</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; John Doe</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.poptrox.min.js"></script>
+<script src="/js/skel.min.js"></script>
+<script src="/js/util.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+	</body>
+</html>
